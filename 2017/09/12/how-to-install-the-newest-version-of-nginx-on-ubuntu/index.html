@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>How to Install the Newest Version of Nginx on Ubuntu | LiuBoping&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="First Step123cd /tmpwget http://nginx.org/keys/nginx_signing.keysudo apt-key add nginx_signing.key Second Stepcreate file apt config file1sudo vim /etc/apt/sources.list.d/nginx.list content,replace $c">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Install the Newest Version of Nginx on Ubuntu">
+<meta property="og:url" content="https://liuboping.com/2017/09/12/how-to-install-the-newest-version-of-nginx-on-ubuntu/index.html">
+<meta property="og:site_name" content="LiuBoping&#39;s Blog">
+<meta property="og:description" content="First Step123cd /tmpwget http://nginx.org/keys/nginx_signing.keysudo apt-key add nginx_signing.key Second Stepcreate file apt config file1sudo vim /etc/apt/sources.list.d/nginx.list content,replace $c">
+<meta property="og:updated_time" content="2017-09-12T07:56:14.723Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How to Install the Newest Version of Nginx on Ubuntu">
+<meta name="twitter:description" content="First Step123cd /tmpwget http://nginx.org/keys/nginx_signing.keysudo apt-key add nginx_signing.key Second Stepcreate file apt config file1sudo vim /etc/apt/sources.list.d/nginx.list content,replace $c">
+  
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-106321241-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">LiuBoping&#39;s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://liuboping.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-how-to-install-the-newest-version-of-nginx-on-ubuntu" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/12/how-to-install-the-newest-version-of-nginx-on-ubuntu/" class="article-date">
+  <time datetime="2017-09-11T23:40:09.000Z" itemprop="datePublished">2017-09-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      How to Install the Newest Version of Nginx on Ubuntu
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="First-Step"><a href="#First-Step" class="headerlink" title="First Step"></a>First Step</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd /tmp</div><div class="line">wget http://nginx.org/keys/nginx_signing.key</div><div class="line">sudo apt-key add nginx_signing.key</div></pre></td></tr></table></figure>
+<h3 id="Second-Step"><a href="#Second-Step" class="headerlink" title="Second Step"></a>Second Step</h3><p>create file apt config file<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo vim /etc/apt/sources.list.d/nginx.list</div></pre></td></tr></table></figure></p>
+<p>content,replace $codename with table below<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">deb http://nginx.org/packages/debian/ $codename nginx</div><div class="line">deb-src http://nginx.org/packages/debian/ $codename nginx</div></pre></td></tr></table></figure></p>
+<p>eg. Ubuntu 16.04<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">deb http://nginx.org/packages/debian/ xenial nginx</div><div class="line">deb-src http://nginx.org/packages/debian/ xenial nginx</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">Debian:</div><div class="line">Version	Codename	Supported Platforms</div><div class="line">7.x		wheezy	x86_64, i386</div><div class="line">8.x		jessie	x86_64, i386</div><div class="line">9.x		stretch	x86_64, i386</div><div class="line"></div><div class="line">Ubuntu:</div><div class="line">Version	Codename	Supported Platforms</div><div class="line">12.04	precise	x86_64, i386</div><div class="line">14.04	trusty	x86_64, i386, aarch64/arm64</div><div class="line">16.04	xenial	x86_64, i386, ppc64el, aarch64/arm64</div><div class="line">16.10	yakkety	x86_64, i386</div></pre></td></tr></table></figure>
+<h3 id="Third-Step"><a href="#Third-Step" class="headerlink" title="Third Step"></a>Third Step</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install nginx</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://liuboping.com/2017/09/12/how-to-install-the-newest-version-of-nginx-on-ubuntu/" data-id="cj7ioua6m0000jdqeiwf845dl" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/09/13/Run-Multiple-Versions-of-PHP-on-a-Single-Server-with-php-build/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Run Multiple Versions of PHP on a Single Server with php-build
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP/">PHP</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/PHP/" style="font-size: 10px;">PHP</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/09/13/Run-Multiple-Versions-of-PHP-on-a-Single-Server-with-php-build/">Run Multiple Versions of PHP on a Single Server with php-build</a>
+          </li>
+        
+          <li>
+            <a href="/2017/09/12/how-to-install-the-newest-version-of-nginx-on-ubuntu/">How to Install the Newest Version of Nginx on Ubuntu</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Boping Liu<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
